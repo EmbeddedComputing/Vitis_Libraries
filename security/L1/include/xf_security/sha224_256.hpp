@@ -752,9 +752,8 @@ inline void sha256_top(hls::stream<ap_uint<m_width> >& msg_strm,
 #pragma HLS DATAFLOW
     /// 512-bit Block stream
     hls::stream<SHA256Block> blk_strm("blk_strm");
-#pragma HLS STREAM variable = blk_strm depth = 32
+#pragma HLS STREAM variable = blk_strm depth = 4097
 #pragma HLS RESOURCE variable = blk_strm core = FIFO_LUTRAM
-
     /// number of Blocks, send per msg
     hls::stream<uint64_t> nblk_strm("nblk_strm");
 #pragma HLS STREAM variable = nblk_strm depth = 32

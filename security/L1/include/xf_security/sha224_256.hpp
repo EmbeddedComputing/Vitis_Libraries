@@ -34,7 +34,7 @@
 // XXX toggle here to debug this file
 #define _XF_SECURITY_PRINT(msg...) \
     do {                           \
-        if (_DEBUG)    \
+        if (_DEBUG) ;   \
     } while (0)
 
 #define ROTR(n, x) ((x >> n) | (x << (32 - n)))
